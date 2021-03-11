@@ -1,6 +1,8 @@
 
 example docker compose
 
+```
+
 version: '3'
 services:
   db:
@@ -42,3 +44,4 @@ volumes:
   odm-files-data:
   odm-db-data:
   odm-docker-configs:
+```
