@@ -1,6 +1,6 @@
 
 example docker compose
-
+``
 version: '3'
 services:
   db:
