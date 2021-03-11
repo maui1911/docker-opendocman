@@ -1,6 +1,9 @@
 FROM php:7.4-apache
 LABEL maintainer=maui1911
 
+ENV HOME /root
+WORKDIR ${HOME}
+
 # Install packages
 RUN apt-get update \
   && apt-get install --no-install-recommends -y apt-utils vim git openssl ssl-cert sendmail default-mysql-client \
@@ -9,7 +12,7 @@ RUN apt-get update \
 
 #get code
 RUN git clone https://github.com/opendocman/opendocman.git .
-
+WORKDIR ${HOME}
 # Copy php configs
 #COPY src/main/resources/docker-php-pecl-install /usr/local/bin/
 #RUN docker-php-pecl-install xdebug-2.3.3
