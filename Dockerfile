@@ -8,7 +8,7 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 #get code
-RUN git clone https://github.com/opendocman/opendocman.git
+RUN git clone https://github.com/opendocman/opendocman.git .
 
 # Copy php configs
 #COPY src/main/resources/docker-php-pecl-install /usr/local/bin/
