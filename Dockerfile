@@ -11,8 +11,8 @@ RUN apt-get update \
   && rm -rf /var/lib/apt/lists/*
 
 #get code
-RUN git clone https://github.com/opendocman/opendocman.git .
-WORKDIR ${HOME}
+RUN git clone https://github.com/opendocman/opendocman.git 
+WORKDIR ${HOME}/opendocman
 # Copy php configs
 #COPY src/main/resources/docker-php-pecl-install /usr/local/bin/
 #RUN docker-php-pecl-install xdebug-2.3.3
